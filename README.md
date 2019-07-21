@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+※参照
+https://qiita.com/azul915/items/5b7063cbc80192343fc0#dockerfile%E3%82%84docker-composeyml%E3%81%AE%E5%A4%89%E6%9B%B4%E3%82%92%E5%8F%8D%E6%98%A0rails%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E5%86%8D%E8%B5%B7%E5%8B%95
 
-Things you may want to cover:
+##初回のみ
 
-* Ruby version
+1,$ docker-compose build
 
-* System dependencies
+2,$ docker-compose up -d
 
-* Configuration
+3,$ docker-compose run web rails db:create
+※sampleAppで実行
 
-* Database creation
+## コンテナ起動（rails s）
 
-* Database initialization
+1,$ docker-compose up -d
 
-* How to run the test suite
+2,$ docker-compose run web rails db:create \
+※sampleAppで実行
 
-* Services (job queues, cache servers, search engines, etc.)
+## コンテナ終了(サーバーexit)
 
-* Deployment instructions
+$ docker-compose down
 
-* ...
+## bundle installコマンド
+
+$ docker-compose run web bundle install
+
+
